@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: rc_robot_trajectory
+Description: Description of rc_robot_trajectory
+Version: 0.1.0
+Cflags: 
+Libs: -L/usr/local/lib -linteractivity_utils
+Requires: moveit_core moveit_visual_tools moveit_ros_planning_interface interactive_markers

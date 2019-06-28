@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+# generated from catkin/python/catkin/environment_cache.py
+
+# based on a snapshot of the environment before and after calling the setup script
+# it emulates the modifications of the setup script without recurring computations
+
+# new environment variables
+
+# modified environment variables
+export CMAKE_PREFIX_PATH="/home/garcia/projects/software/ros/rc_moveit_tutorial/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/garcia/projects/software/ros/rc_moveit_tutorial/cmake-build-debug/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/garcia/projects/software/ros/rc_moveit_tutorial/cmake-build-debug/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/garcia/projects/software/ros/rc_moveit_tutorial/cmake-build-debug/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/garcia/catkin_ws/src/rc_trayectory_planning:/home/garcia/projects/software/ros/rc_trajectory_planning:/home/garcia/projects/software/ros/rc_moveit_tutorial:/home/garcia/catkin_ws/src/hardware_models/agilus_ros/agilus_description:/home/garcia/catkin_ws/src/hardware_models/agilus_ros/agilus_gazebo:/home/garcia/catkin_ws/src/hardware_models/agilus_ros/agilus_moveit:/home/garcia/catkin_ws/src/hardware_models/env_elements_description:/home/garcia/catkin_ws/src/hardware_models/hardware_models:/home/garcia/catkin_ws/src/hardware_models/iisy_ros/iisy_description:/home/garcia/catkin_ws/src/hardware_models/iiwa_ros/iiwa_description:/home/garcia/catkin_ws/src/hardware_models/iiwa_ros/iiwa_gazebo:/home/garcia/catkin_ws/src/hardware_models/iiwa_ros/iiwa_moveit:/home/garcia/catkin_ws/src/moveit_tutorials:/home/garcia/catkin_ws/src/panda_moveit_config:/home/garcia/catkin_ws/src/rc_aip_pick_ros/rc_aip_msgs:/home/garcia/catkin_ws/src/rc_apps_msgs:/home/garcia/catkin_ws/src/rc_cv_utils:/home/garcia/catkin_ws/src/rc_visard_ros/rc_hand_eye_calibration_client:/home/garcia/catkin_ws/src/rc_imagesync:/home/garcia/catkin_ws/src/rc_objectdetectionmanager/rc_objectdetectionmanager_msgs:/home/garcia/catkin_ws/src/rc_aip_modelgen:/home/garcia/catkin_ws/src/rc_aip_pick_ros/rc_aip_pick:/home/garcia/catkin_ws/src/rc_objectdetectionmanager/rc_objectdetectionmanager:/home/garcia/catkin_ws/src/rc_visard_ros/rc_pick_client:/home/garcia/catkin_ws/src/rc_moveit_tutorial:/home/garcia/catkin_ws/src/hardware_models/robotiq_140_gripper/robotiq_140_description:/home/garcia/catkin_ws/src/hardware_models/schmalz_cobotpump/schmalz_cobotpump_description:/home/garcia/catkin_ws/src/ur_bringup:/home/garcia/catkin_ws/src/ur_description:/home/garcia/catkin_ws/src/ur5_e_moveit_config:/home/garcia/catkin_ws/src/ur5_moveit_config:/home/garcia/catkin_ws/src/ur_driver:/home/garcia/catkin_ws/src/ur_e_description:/home/garcia/catkin_ws/src/ur_msgs:/home/garcia/catkin_ws/src/ur_modern_driver:/opt/ros/melodic/share"

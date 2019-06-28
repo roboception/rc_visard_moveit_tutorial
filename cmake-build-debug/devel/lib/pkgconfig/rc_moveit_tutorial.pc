@@ -1,0 +1,8 @@
+prefix=/home/garcia/projects/software/ros/rc_moveit_tutorial/cmake-build-debug/devel
+
+Name: rc_moveit_tutorial
+Description: Description of rc_moveit_tutorial
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/garcia/projects/software/ros/rc_moveit_tutorial/cmake-build-debug/devel/lib -linteractivity_utils
+Requires: moveit_core moveit_visual_tools moveit_ros_planning_interface interactive_markers rc_pick_client

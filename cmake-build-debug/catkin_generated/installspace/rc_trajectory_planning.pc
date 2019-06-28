@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: rc_trajectory_planning
+Description: Description of rc_trajectory_planning
+Version: 0.1.0
+Cflags: 
+Libs: -L/usr/local/lib -linteractivity_utils
+Requires: moveit_core moveit_visual_tools moveit_ros_planning_interface ur5_moveit_config interactive_markers rc_pick_client
