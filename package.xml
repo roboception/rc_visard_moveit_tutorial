@@ -31,6 +31,8 @@
   <depend>geometric_shapes</depend>
   <depend>moveit_visual_tools</depend>
   <depend>rc_pick_client</depend>
+  <depend>rc_visard_driver</depend>
+  <depend>rc_hand_eye_calibration_client</depend>
   <depend>pcl_ros</depend>
   <depend>pcl_conversions</depend>
 

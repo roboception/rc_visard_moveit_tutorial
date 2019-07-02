@@ -20,6 +20,6 @@
   <!-- Start the grasp trajectory planning node -->
 
   <node  name="rc_visard_moveit_tutorial_node" pkg="rc_visard_moveit_tutorial" type="rc_visard_moveit_tutorial_node"
-         args="_end_effector_link:=$(arg end_effector_link) _manipulator_group:=$(arg manipulator_group) rc_package:=$(arg rc_package)" />
+         args="_end_effector_link:=$(arg end_effector_link) _manipulator_group:=$(arg manipulator_group) _rc_package:=$(arg rc_package)" />
 
 </launch>

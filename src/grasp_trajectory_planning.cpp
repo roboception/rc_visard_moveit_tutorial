@@ -147,7 +147,7 @@ bool planGraspItempick(rc_pick_client::ComputeGraspsRequest &request,
 
 int main(int argc, char **argv)
 {
-  const std::string node_name = "rc_moveit_tutorial_node";
+  const std::string node_name = "rc_visard_moveit_tutorial_node";
   ros::init(argc, argv, node_name);
   ros::NodeHandle nh(node_name);
 
