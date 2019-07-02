@@ -31,6 +31,7 @@ find_package(catkin REQUIRED
     moveit_ros_perception
     geometric_shapes
     pcl_ros
+    rc_pick_client
 )
 find_package(Boost REQUIRED system filesystem date_time thread)
 
