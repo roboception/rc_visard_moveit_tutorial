@@ -4,7 +4,7 @@
   <arg name="device" />
   <arg name="end_effector_link"  />
   <arg name="manipulator_group" />
-  <arg name="pick_module" />
+  <arg name="rc_package" />
 
   <!-- Launch rc_visard packages -->
   <node type="rc_hand_eye_calibration_client_node" name="rc_hand_eye_calibration_client"
@@ -13,7 +13,6 @@
   <node type="rc_visard_driver" name="rc_visard_driver" pkg="rc_visard_driver" args="_device:=:$(arg device)" />
   <node type="rc_itempick_client_node" name="rc_itempick" pkg="rc_pick_client" args="_host:=$(arg host)" />
 
-
   <!-- broadcast static tf for robot root -->
   <node pkg="tf2_ros" type="static_transform_publisher" name="world_to_external"
         args="0 0 0 0 0 1 0 external world" />
@@ -21,6 +20,6 @@
   <!-- Start the grasp trajectory planning node -->
 
   <node  name="rc_visard_moveit_tutorial_node" pkg="rc_visard_moveit_tutorial" type="rc_visard_moveit_tutorial_node"
-         args="_end_effector_link:=$(arg end_effector_link) _manipulator_group:=$(arg manipulator_group) _pick_module:=$(arg pick_module)" />
+         args="_end_effector_link:=$(arg end_effector_link) _manipulator_group:=$(arg manipulator_group) rc_package:=$(arg rc_package)" />
 
 </launch>

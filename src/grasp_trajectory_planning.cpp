@@ -47,7 +47,7 @@
 
 
 ros::ServiceClient client_compute_grasps;
-std::string end_effector_link, planning_group, pick_module;
+std::string end_effector_link, planning_group, rc_package;
 
 
 void computeGraspTrajectory(bool executing, std::vector<rc_pick_client::SuctionGrasp> &grasps,
@@ -154,12 +154,12 @@ int main(int argc, char **argv)
   // Parse parameters
   nh.getParam("end_effector_link", end_effector_link);
   nh.getParam("manipulator_group", planning_group);
-  nh.getParam("pick_module", pick_module);
-  ROS_ASSERT((pick_module == "rc_itempick") || (pick_module == "rc_boxpick"));
+  nh.getParam("rc_package", rc_package);
+  ROS_ASSERT((rc_package == "rc_itempick") || (rc_package == "rc_boxpick"));
   ROS_ASSERT(!end_effector_link.empty());
   ROS_ASSERT(!planning_group.empty());
   ROS_INFO_STREAM("Using: " << end_effector_link << " as end effector link.");
-  ROS_INFO_STREAM("Using: " << pick_module << " as pick module.");
+  ROS_INFO_STREAM("Using: " << rc_package << " as rc_package.");
   ROS_INFO_STREAM("Using: " << planning_group << " as manipulator group.");
 
   ros::AsyncSpinner spinner(3);
@@ -183,18 +183,18 @@ int main(int argc, char **argv)
   }
   collision_result.clear();
 
-  client_compute_grasps = nh.serviceClient<rc_pick_client::ComputeGrasps>("/" + pick_module + "/compute_grasps");
+  client_compute_grasps = nh.serviceClient<rc_pick_client::ComputeGrasps>("/" + rc_package + "/compute_grasps");
   client_compute_grasps.waitForExistence();
   ros::ServiceServer service_executeGrasp;
   ros::ServiceServer service_planGrasp;
-  if (pick_module == "rc_itempick")
+  if (rc_package == "rc_itempick")
   {
     service_executeGrasp = nh.advertiseService("execute_trajectory",
                                                executeGraspItempick);
     service_planGrasp = nh.advertiseService("plan_trajectory",
                                             planGraspItempick);
   }
-  else if (pick_module == "rc_boxpick")
+  else if (rc_package == "rc_boxpick")
   {
     service_executeGrasp = nh.advertiseService("execute_trajectory",
                                                executeGraspBoxpick);
@@ -203,7 +203,7 @@ int main(int argc, char **argv)
   }
   else
   {
-    ROS_ERROR_STREAM("Module not supported: " << pick_module);
+    ROS_ERROR_STREAM("Package not supported: " << rc_package);
     return 1;
   }
   ros::waitForShutdown();
