@@ -3,14 +3,7 @@ Region of interest Graphical User Interface
 
 Overview
 --------
-This component provides an interactive markers based graphical interface on rviz. It's focus is to manage, edit and define regions of interest for a specific module on the rc_visard sensor.
+This component shows an example of the integration of the MoveIt package with one of Roboception's Pick modules. It plans and executes a trajectory for a robot's tool center point (TCP) to a grasping position calculated by Roboception's picking modules.
 
-For more information go to the ROS Wiki page of this tutorial: http://wiki.ros.org/rc_visard/Tutorials/ManagingRegionsofInterest
+For more information go to the ROS Wiki page of this tutorial: http://wiki.ros.org/rc_visard/Tutorials/PickModule-MoveItTutorial
 
-Launch
-------
-This node can be started using the roslaunch command. For this, the sensor serial number, its ip address and the module to be utilized (rc_itempick or rc_boxpick) have to be given as arguments.
-
-~~~
-roslaunch rc_pick_client InteractiveRoiSelection.launch device:=serial_number host:=sensor_ip pick_module:=rc_module
-~~~

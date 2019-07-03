@@ -87,6 +87,14 @@ install(TARGETS rc_visard_moveit_tutorial_node
    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 
+install(FILES
+        launch/demo.launch grasp_trajectory.launch move_group.launch sensor_manager.launch.xml ur4_moveit_planning_execution.launch
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch  )
+
+install(FILES
+        config/config.rviz
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config  )
+
 #############
 ## Testing ##
 #############
