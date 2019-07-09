@@ -1,4 +1,4 @@
-Region of interest Graphical User Interface
+Pick Module - MoveIt Tutorial
 ===========================================
 
 Overview
