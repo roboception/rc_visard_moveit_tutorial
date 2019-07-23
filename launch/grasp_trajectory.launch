@@ -1,6 +1,5 @@
 <launch>
 
-  <arg name="host" />
   <arg name="device" />
   <arg name="end_effector_link"  />
   <arg name="manipulator_group" />
@@ -11,7 +10,7 @@
         pkg="rc_hand_eye_calibration_client"
         args="_host:=$(arg host) _base_frame_id:=external _calibration_publication_period:=0" />
   <node type="rc_visard_driver" name="rc_visard_driver" pkg="rc_visard_driver" args="_device:=:$(arg device)" />
-  <node type="rc_itempick_client_node" name="rc_itempick" pkg="rc_pick_client" args="_host:=$(arg host)" />
+  <node type="rc_itempick_client_node" name="rc_itempick" pkg="rc_pick_client" args="_device:=:$(arg device)" />
 
   <!-- broadcast static tf for robot root -->
   <node pkg="tf2_ros" type="static_transform_publisher" name="world_to_external"
